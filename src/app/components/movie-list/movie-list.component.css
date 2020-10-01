@@ -1,0 +1,16 @@
+.item-movie-table img {
+  height: 125px;
+  width: auto;
+}
+.options-table{
+  display: flex;
+}
+.options-table a {
+  width: auto;
+  flex: 1;
+  height: max-content;
+  margin: 0;
+}
+.card-movie img {
+  height: 280px;
+}

@@ -1,0 +1,55 @@
+<h2>Recent <i class="fas fa-film"></i></h2>
+<div class="row">
+    <div class="col-md-3 mb-3" *ngFor="let movie of movies">
+        <div class="card text-center card-movie">
+            <img
+                src="{{ movie.image }}"
+                class="card-img-top"
+                alt="{{ movie.title }}"
+            />
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{ movie.title }}
+                    <span>({{ movie.release_date | date: 'yyyy' }})</span>
+                </h5>
+                <a
+                    [routerLink]="['/movies', movie.id]"
+                    class="btn btn-info btn-block"
+                    ><i class="fas fa-eye"></i> View More</a
+                >
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Title</th>
+            <th scope="col">Synopsis</th>
+            <th scope="col">Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="item-movie-table" *ngFor="let movie of movies">
+            <td><img src="{{ movie.image }}" /></td>
+            <td>{{ movie.title }}</td>
+            <td>{{ movie.synopsis }}</td>
+            <td>
+                <div class="options-table">
+                    <a class="btn btn-info btn-block" href="#"
+                        ><i class="fas fa-eye"></i
+                    ></a>
+                    <a class="btn btn-warning btn-block" href="#"
+                        ><i class="far fa-edit"></i
+                    ></a>
+                    <a class="btn btn-danger btn-block" href="#"
+                        ><i class="fas fa-trash-alt"></i
+                    ></a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>-->

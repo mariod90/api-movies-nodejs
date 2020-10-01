@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-4">
+        <img
+            src="{{ movie.image }}"
+            alt="{{ movie.title }}"
+            class="img-movie-single"
+        />
+    </div>
+    <div class="col-md-8">
+        <h2>{{ movie.title }}</h2>
+        <h3 class="text-info">Synopsis</h3>
+        <p>{{ movie.synopsis }}</p>
+        <hr />
+        <h5 class="text-info">Release Date:</h5>
+        <p>{{ movie.release_date | date: 'yyyy-MM-dd' }}</p>
+        <hr />
+        <h3 class="text-warning">Options</h3>
+        <div class="options-single-movie">
+            <a
+                class="btn btn-warning"
+                [routerLink]="['/movies/edit', movie.id]"
+            >
+                <i class="far fa-edit"></i> Edit
+            </a>
+            <button class="btn btn-danger" (click)="deleteMovie(movie.id)">
+                <i class="fas fa-trash-alt"></i> Delete
+            </button>
+        </div>
+    </div>
+</div>

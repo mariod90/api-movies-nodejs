@@ -1,0 +1,14 @@
+.img-movie-single {
+  width: 100%;
+  height: auto;
+}
+.options-single-movie{
+  display: flex;
+}
+.options-single-movie button,
+.options-single-movie a {
+  width: 45%;
+  max-width: 200px;
+  margin: 0 3% 0 0;
+  height: max-content;
+}

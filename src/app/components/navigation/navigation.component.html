@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/" routerLinkActive="active"
+            >Movies CRUD</a
+        >
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarColor01"
+            aria-controls="navbarColor01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        routerLink="/movies"
+                        routerLinkActive="active"
+                        ><i class="fas fa-film"></i> Movies</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        routerLink="/movies/add"
+                        routerLinkActive="active"
+                        ><i class="fas fa-plus-circle"></i> Add Movie</a
+                    >
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

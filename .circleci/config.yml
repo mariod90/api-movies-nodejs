@@ -38,7 +38,7 @@ jobs:
           paths:
             - ~/.npm
       - run:
-          command: npm run test
+          command: npm run testchromeheadless
           name: Run NPM Tests
           working_directory: ~/project
 workflows:

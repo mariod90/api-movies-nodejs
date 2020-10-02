@@ -1,7 +1,11 @@
 version: 2.1
-orbs:
-  node: circleci/node@3.0.0
-workflows:
-  node-tests:
-    jobs:
-      - node/test
+jobs:
+  build:
+    docker:
+      - image:  circleci/node3.0.0
+      environment:
+        - CHROME_BIN=/usr/bin/google-chrome
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm test
